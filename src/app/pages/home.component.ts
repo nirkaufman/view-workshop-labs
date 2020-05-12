@@ -7,13 +7,13 @@ import {Component} from '@angular/core';
           Home Page
       </h2>
       
-      <ng-template>
-          <button (click)="home()" class="btn btn-primary">Home Button</button>
+      <ng-template nkAttachTo="navbar">
+        <button (click)="home()" class="btn btn-primary">Home Button</button>
       </ng-template>
-      
   `,
 })
 export class HomeComponent {
+
   home() {
     alert('Home Page')
   }

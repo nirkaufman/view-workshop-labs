@@ -6,10 +6,9 @@ import {Component} from '@angular/core';
       <footer id="footer" class="footer mt-auto py-3">
           <div class="container">
               <span class="text-muted">
-                  footer content
+                  <ng-container nkTarget="footer"></ng-container>
               </span>
           </div>
-          
       </footer>
   `,
 })
