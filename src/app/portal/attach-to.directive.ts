@@ -18,9 +18,4 @@ export class AttachToDirective implements OnInit, OnDestroy{
   ngOnDestroy(): void {
     this.portalService.clear(this.targetName);
   }
-
-
-
-
-
 }
