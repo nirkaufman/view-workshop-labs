@@ -1,3 +1,4 @@
+
 # Lab 1 - Property modification with Renderer
 
 Steps:
@@ -29,7 +30,7 @@ export class AppComponent implements AfterViewInit {
     `]  
 ```
 
-6. create an `object` on you class that maps those classes to booleans
+6. create an `object` on the component class that maps those classes to booleans
 
 ```
   styles = {

@@ -67,7 +67,7 @@ export class Lab3Component implements DoCheck {
   @Input() cards: Card[] = [];
 
   ngDoCheck(): void {
-    if (this.cards && this.defaultTextCard) {
+    if (this.cards) {
       this.cards.forEach(card => {
         this.viewContainer.createEmbeddedView(this.defaultTextCard, {
           $implicit: card
