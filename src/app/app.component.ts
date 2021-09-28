@@ -12,7 +12,6 @@ import {Component} from '@angular/core';
               <div class="container-fluid">
                   <router-outlet></router-outlet>
               </div>
-
           </div>
 
           <tp-footer></tp-footer>
