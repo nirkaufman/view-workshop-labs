@@ -4,12 +4,8 @@ import {Component} from '@angular/core';
   selector: 'tp-home',
   template: `
       <h2 class="mt-3">
-          Home Page
+          The Playground
       </h2>
-      
-      <ng-template nkAttachTo="navbar">
-        <button (click)="home()" class="btn btn-primary">Home Button</button>
-      </ng-template>
   `,
 })
 export class HomeComponent {

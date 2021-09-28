@@ -16,7 +16,7 @@ import {Component} from '@angular/core';
           </div>
 
           <tp-footer></tp-footer>
-      </div>     
+      </div>
   `,
 })
 export class AppComponent {
