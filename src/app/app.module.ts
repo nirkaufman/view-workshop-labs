@@ -9,6 +9,9 @@ import { FooterComponent } from './layout/footer.component';
 import { HomeComponent } from './pages/home.component';
 import { ProfileComponent } from './pages/profile.component';
 import { ProjectsComponent } from './pages/projects.component';
+import { WindowDirective } from './directives/window.directive';
+import { TargetDirective } from './directives/target.directive';
+import { AttachToDirective } from './directives/attach-to.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ProjectsComponent } from './pages/projects.component';
     HomeComponent,
     ProfileComponent,
     ProjectsComponent,
+    WindowDirective,
+    TargetDirective,
+    AttachToDirective,
   ],
   imports: [
     BrowserModule,

@@ -6,15 +6,13 @@ import {Component} from '@angular/core';
       <h2 class="mt-3">
           Profile Page
       </h2>
-      
-      <button *nkAttachTo="'navbar'" (click)="profile()" class="btn btn-info">Profile Button</button>
-      <p *nkAttachTo="'footer'">Text from profile</p>
-
+      <button *nkAttachTo="'footer'" class="btn btn-primary" (click)="editProfile()">Edit Profile</button>
   `,
 })
 export class ProfileComponent {
 
-  profile() {
-    alert('Profile Page')
+  editProfile() {
+    console.log('edit your profile!');
+
   }
 }

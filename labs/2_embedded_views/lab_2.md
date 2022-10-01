@@ -9,7 +9,7 @@
 2. use `@ViewChild` to get a reference to the template
 
 ```
-@ViewChild(TemplateRef) container;
+@ViewChild(TemplateRef) template: TemplateRef<any>;
 ```
 
 3. implement `OnInit`, use the `createEmbeddedView()` method to get a `View`

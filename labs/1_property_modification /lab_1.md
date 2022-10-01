@@ -1,4 +1,3 @@
-
 # Lab 1 - Property modification with Renderer
 
 Steps:

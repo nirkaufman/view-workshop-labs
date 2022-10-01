@@ -1,4 +1,4 @@
-# Lab 1 - Property modification directive
+# Lab 1_2 - Property modification directive
 
 1. create a directive name is `class`
 

@@ -1,44 +1,25 @@
 # Lab 2_2 - Embedded view with context
 
-- declare a template variable on the template and use it within the template
+1. use context to make the list item dynamic.
+2. for each color, render its name
 
-```
-    <ng-template let-value>
-        <h2>lab2 works! with {{ value }}</h2>
-    </ng-template>
-```
-
-- when you create the view, provide a context object and initialize the $implicit property
-
-```
-  ngAfterViewInit(): void {
-    this.container.createEmbeddedView(this.template, {$implicit: 25});
-  }
+end results in the browser should look like this:
+```html
+<ul>
+    <li>red</li>
+    <li>green</li>
+    <li>blue</li>
+</ul>
 ```
 
-- you should get a change detection error saying that the value changed after it was checked
-- to fix it, make sure to trigger change detection on this view
+Bonus: display an index, and be aware of last value.  
+The end result should look like this:
 
-```
-  ngAfterViewInit(): void {
-    const view = this.container.createEmbeddedView(this.template, {$implicit: 25});
-    view.detectChanges();
-  }
-```
-
-- provide another value in context
-
-```
-    const view = this.container.createEmbeddedView(this.template, {
-      $implicit: 25,
-      anotherValue: 'another value'
-    });
+```html
+<ul>
+    <li>1: red</li>
+    <li>2: green</li>
+    <li>3 and Last: blue</li>
+</ul>
 ```
 
-- assign a template variable to it in order to use it within your template
-
-```
-    <ng-template let-value let-another="anotherValue">
-        <h2>lab2 works! with {{ value }} {{ another }}</h2>
-    </ng-template>
-``` 

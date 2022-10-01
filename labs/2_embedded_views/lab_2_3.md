@@ -7,6 +7,7 @@
 ```
 @Directive({
   selector: '[nkWhen]'
+  standalone: true
 })
 export class WhenDirective {
 
@@ -32,6 +33,8 @@ export class WhenDirective {
 ```
 @Component({
   selector: 'nk-lab2',
+  standalone: true,
+  imports: [WhenDirective]
   template: `
     <ng-container #container></ng-container>
     
@@ -74,7 +77,6 @@ export class WhenDirective implements OnChanges {
   selector: 'nk-lab2',
   template: `
     <input type="checkbox" (change)="toggle()"> Toggle  
-    <ng-container #container></ng-container>
     
     <ng-template [nkWhen]="visible">
         <h2>lab2 works!</h2>
@@ -89,46 +91,19 @@ export class Lab2Component {
   }
 }
 ```
+Bonus!
 
-- Lets provide a template for the `else` condition
-- In the component create another template and give it a ref
+- Implemnt an option to pass a template for the `else` condition
 
-```
-<ng-template #default>
-    <h2>lab2 default</h2>
+Usage should look like this:
+
+```html
+<ng-template [nkWhen]="visible" [nkElse]="elseTemplate">
+    <h2>lab2 works!</h2>
 </ng-template>
-```
 
-- Create another `input` to the directive for a `template`
+<ng-template #elseTemplate>
+    <h2>Else Template</h2>
+</ng-template>
 
-```
-export class WhenDirective implements OnChanges {
-  @Input() nkWhen: boolean;
-  @Input() nkWhenElse: TemplateRef<any>;
-}
-```
-- refactor the logic to work with the alternative template
-
-```
-  ngOnChanges(): void {
-    this.container.clear();
-
-    if (this.nkWhen) {
-      this.container.createEmbeddedView(this.template);
-    } else if (this.nkWhenElse) {
-      this.container.createEmbeddedView(this.nkWhenElse);
-    }
-  }
-```
-
-- finally, use ot on the template
-
-```
-    <ng-template [nkWhen]="visible" [nkWhenElse]="alt">
-        <h2>lab2 works!</h2>
-    </ng-template>
-      
-    <ng-template #alt>
-        <h2>lab2 default</h2>
-    </ng-template>
 ```
