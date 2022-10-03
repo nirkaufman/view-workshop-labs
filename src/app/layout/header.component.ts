@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom d-flex justify-content-end">
           <span class="text-muted">
-              <ng-container nkTarget="header"></ng-container>
+              Header Text
           </span>
       </nav>
   `

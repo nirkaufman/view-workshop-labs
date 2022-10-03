@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'tp-projects',
   template: `
       <h2 class="mt-3">
-          Sample Page
+          Projects Page
       </h2>
   `
 })

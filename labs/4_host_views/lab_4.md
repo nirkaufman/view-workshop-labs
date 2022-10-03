@@ -1,5 +1,21 @@
 # Lab 4 - practice HostView Creation
 
-- Your turn!
-- using everything you learned, create a component and load and attach it
-  to your component HostView 
+1. create an instance of a Component and insert it to a `viewContainer`
+2. create a structural directive that do this for you, it should look like this:
+
+```html
+ <ng-container *renderComponent="ComponentClass"></ng-container>
+```
+
+Bonus:
+Pass props to this directive with micro syntax:
+
+```html
+
+<ng-container *renderComponent="ComponentClass; withContext="context"></ng-container>
+
+context = {}
+```
+
+
+
