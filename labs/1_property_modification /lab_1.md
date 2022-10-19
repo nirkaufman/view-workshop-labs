@@ -52,7 +52,7 @@ export class AppComponent implements AfterViewInit {
     const element = this.title.nativeElement;
 
     for (let key in this.styles) {
-      if (this.styles[key]) {
+      if (this.styles[key] === true) {
         this.renderer.addClass(element, key);
       } else {
         this.renderer.removeClass(element, key);
